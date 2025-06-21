@@ -1,0 +1,114 @@
+.register-container {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 610px 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color_4);
+}
+
+.register-form-container {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: var(--color_4);
+    display: flex;
+    flex-direction: column;
+    justify-content: start
+}
+
+.form-header-2 {
+    text-align: start;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+}
+.form-header-2 h2 {
+    color: #333;
+    font-size: 36px;
+}
+.form-header-2 ::after{
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 130px;
+    height: 3px; /* Độ dày của underline */
+    background-color: var(--color_2); /* Màu của underline */
+}
+
+.register-button {
+    width: 290px;
+    background-color: var(--color_2);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    font-family: 'Koh Santepheap', sans-serif;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+input.invalid {
+    border: 1px solid #e74c3c;
+}
+
+.register-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+/* Thêm vào file RegisterContent.css */
+
+/* Style cho hiển thị mật khẩu */
+.password-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.toggle-password-btn:hover {
+  color: #333;
+}
+
+/* Style cho thông báo thành công */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Style cho thông báo lỗi chung */
+.error-general {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+  text-align: center;
+}

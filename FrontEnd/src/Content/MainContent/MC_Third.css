@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.div-5 {
+    grid-column: span 5/ span 5;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-top: 30px;
+}
+.div-5 h3{
+    font-size: 18px;
+    color: var(--color_1);
+}
+
+.div-6 {
+    grid-column: 1 / 9;
+    grid-row: 2 / 9;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+
+.novels-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 322px);
+    gap: 20px;
+}
+
+.novel-card {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.novel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.novel-thumbnail {
+    height: 210px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.novel-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.novel-info-2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.novel-title {
+    margin: 5px 4px 15px ;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.novel-chapters-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 10px;
+    margin: 0 5px;
+}
+
+.novel-chapters-list .chapter-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+    margin: 2px 0;
+}
+
+.novel-chapters-list .chapter-number {
+    font-size: 10px;
+    color: rgb(8, 8, 8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.novel-chapters-list .chapter-time {
+    font-size: 9px;
+    color: #000000;
+    margin-left: 5px;
+}
+
+
+.div-6 .pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 5px;
+}
+
+.div-6 .pagination-arrow, .div-6 .pagination-number {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.2s;
+    color: #FB7185
+}
+
+.div-6 .pagination-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.div-6 .pagination-number.active {
+    background-color: #FB7185;
+    color: white;
+    border-color: #FB7185;
+}
+
+.div-6 .pagination-arrow:hover:not(:disabled),
+.div-6 .pagination-number:hover:not(.active) {
+    background-color: #eee;
+}

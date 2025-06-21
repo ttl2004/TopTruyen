@@ -1,0 +1,44 @@
+.reload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: var(--color_3);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: background-color 0.2s;
+    height: 50px;
+}
+
+.reload-button:hover {
+    background-color: var(--color_4);
+}
+
+.reload-button:active {
+    transform: scale(0.98);
+}
+
+.stats-change {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.stats-change.positive {
+    color: #22c55e;
+}
+
+.stats-change.negative {
+    color: #ef4444;
+}
+
+.stats-subtitle {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 4px;
+    opacity: 0.8;
+}

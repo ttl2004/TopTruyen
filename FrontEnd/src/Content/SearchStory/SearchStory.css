@@ -1,0 +1,278 @@
+/* SearchStory1 - Container chính
+SearchStory2 - Header tìm kiếm
+SearchStory3 - Tiêu đề tìm kiếm
+SearchStory4 - Icon mũi tên bên cạnh tiêu đề
+SearchStory5 - Wrapper cho ô tìm kiếm
+SearchStory6 - Input tìm kiếm
+SearchStory7 - Icon tìm kiếm
+SearchStory8 - Container bộ lọc
+SearchStory9 - Section bộ lọc
+SearchStory10 - Tiêu đề bộ lọc
+SearchStory11 - Container các nút lọc
+SearchStory12 - Nút lọc
+SearchStory13 - Trạng thái active cho nút lọc
+SearchStory14 - Grid truyện
+SearchStory15 - Card truyện
+SearchStory16 - Link truyện
+SearchStory17 - Container thumbnail
+SearchStory18 - Hình ảnh truyện
+SearchStory19 - Tiêu đề truyện
+SearchStory20 - Container danh sách chương
+SearchStory21 - Link chương
+SearchStory22 - Container thông tin chương
+SearchStory23 - Số chương
+SearchStory24 - Số lượt xem */
+/* Container chính */
+.SearchStory1 {
+    grid-column: 2/3;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header tìm kiếm */
+.SearchStory2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.SearchStory3 {
+    font-size: 24px;
+    color: #FF6B81;
+    display: flex;
+    align-items: center;
+}
+
+.SearchStory4 {
+    margin-left: 8px;
+    color: #FF6B81;
+}
+
+.SearchStory5 {
+    position: relative;
+    width: 300px;
+}
+
+.SearchStory6 {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px;
+    border: 1px solid #FFB6C1;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.SearchStory7 {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #FF6B81;
+    width: 18px;
+    height: 18px;
+}
+
+/* Bộ lọc */
+.SearchStory8 {
+    background-color: #FFF0F0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.SearchStory9 {
+    margin-bottom: 15px;
+}
+
+.SearchStory9:last-child {
+    margin-bottom: 0;
+}
+
+.SearchStory10 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.SearchStory11 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.SearchStory12 {
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid #FFB6C1;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.SearchStory12:hover {
+    background-color: #FFE0E5;
+}
+
+.SearchStory13 {
+    background-color: #FF6B81;
+    color: white;
+    border-color: #FF6B81;
+}
+
+/* Grid truyện */
+.SearchStory14 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+    .SearchStory14 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .SearchStory14 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .SearchStory14 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card truyện */
+.SearchStory15 {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.SearchStory15:hover {
+    transform: translateY(-5px);
+}
+
+.SearchStory16 {
+    text-decoration: none;
+    color: inherit;
+}
+
+.SearchStory17 {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 133%; /* Tỷ lệ 3:4 cho hình ảnh */
+    overflow: hidden;
+}
+
+.SearchStory18 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.SearchStory19 {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Chapter links */
+.SearchStory20 {
+    border-top: 1px solid #eee;
+}
+
+.SearchStory21 {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.SearchStory21:last-child {
+    border-bottom: none;
+}
+
+.SearchStory21:hover {
+    background-color: #FFF0F0;
+}
+
+.SearchStory22 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.SearchStory23 {
+    font-weight: 500;
+}
+
+.SearchStory24 {
+    color: #999;
+    font-size: 12px;
+}
+
+/* Phân trang */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 5px;
+}
+
+.pagination-arrow, 
+.pagination-number {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.2s;
+    color: #FB7185;
+}
+
+.pagination-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-number.active {
+    background-color: #FB7185;
+    color: white;
+    border-color: #FB7185;
+}
+
+.pagination-arrow:hover:not(:disabled),
+.pagination-number:hover:not(.active) {
+    background-color: #eee;
+}

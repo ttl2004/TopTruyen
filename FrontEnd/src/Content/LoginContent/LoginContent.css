@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-content {
+    grid-column: 2/3;
+    background-color: var(--color_4);
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 610px 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+}
+
+.login-form {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: var(--color_4);
+    display: flex;
+    flex-direction: column;
+    justify-content: start
+}
+
+.form-header {
+    text-align: start;
+    position: relative;
+}
+.form-header::after {
+    content: "";
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 130px;
+    height: 3px; /* Độ dày của underline */
+    background-color: var(--color_2); /* Màu của underline */
+}
+
+.form-header h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #777;
+    font-size: 16px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 73%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.input-group h5 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px 15px 10px;
+    border: 2px solid var(--color_2);
+    border-radius: 11px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 11px;
+}
+
+.input-group input:focus {
+    border-color: #f36b6b;
+    box-shadow: 0 0 0 2px rgba(243, 107, 107, 0.2);
+    outline: none;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 73%;
+    transform: translateY(-50%);
+    color: #666;
+    cursor: pointer;
+}
+
+
+
+.other-options {
+    display: flex;
+    justify-content: end;
+}
+.other-options a {
+    text-decoration: none;
+    margin-left: 12px;
+    margin-bottom: 19px;
+    color: #3B82F6;
+}
+
+.login-button {
+    width: 290px;
+    background-color: var(--color_2);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    font-family: 'Koh Santepheap', sans-serif;
+}
+.error-alert {
+    background-color: #fff2f0;
+    border: 1px solid #ffccc7;
+    color: #ff4d4f;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.login-info {
+    background-color: #f0f9ff;
+    border: 1px dashed #91d5ff;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.test-accounts {
+    font-size: 13px;
+    color: #666;
+}
+
+.test-accounts p {
+    margin: 3px 0;
+}

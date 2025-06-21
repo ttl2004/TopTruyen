@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content-first {
+    grid-column: 2/3;
+    height: auto;
+    background-color: #FFFFFF;
+}

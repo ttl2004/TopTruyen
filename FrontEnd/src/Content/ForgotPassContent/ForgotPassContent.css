@@ -1,0 +1,129 @@
+.forgot-container {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 610px 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color_4);
+}
+
+.forgot-form-container {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: var(--color_4);
+    display: flex;
+    flex-direction: column;
+    justify-content: start
+}
+
+.form-header-3 {
+    text-align: start;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+}
+.form-header-3 h2 {
+    color: #333;
+    font-size: 36px;
+}
+.form-header-3 ::after{
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 130px;
+    height: 3px; /* Độ dày của underline */
+    background-color: var(--color_2); /* Màu của underline */
+}
+
+.form-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.reset-button1 {
+    width: 290px;
+    background-color: var(--color_2);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    font-family: 'Koh Santepheap', sans-serif;
+}
+
+.reset-button1:hover {
+    background-color: var(--color_1);
+}
+
+.reset-button1:disabled {
+    background-color: #f8a0a0;
+    cursor: not-allowed;
+}
+
+.back-button {
+    width: 100%;
+    background-color: var(--color_4);
+    color: var(--color_2);    
+    border: 1px solid var(--color_2);
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    font-family: 'Koh Santepheap', sans-serif;
+}
+
+.back-button:hover {
+    background-color: var(--color_3);
+    border-color: var(--color_1);
+}
+
+.success-message {
+    background-color: #e6f7e6;
+    color: #52c41a;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.confirm-button {
+    background-color: var(--color_2);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    font-family: 'Koh Santepheap', sans-serif;
+}
+
+.confirm-button:hover {
+    background-color: var(--color_1);
+}
+
+.redirect-message {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}

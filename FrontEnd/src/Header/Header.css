@@ -1,0 +1,6 @@
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 930px 1fr;
+    grid-template-rows: 70px;
+    background-color: var(--color_1);
+}

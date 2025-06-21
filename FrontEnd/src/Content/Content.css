@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 970px 1fr;
+    grid-template-rows: 1fr;
+    background-color: var(--color_5);
+}

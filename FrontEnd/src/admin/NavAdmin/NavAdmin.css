@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.admin-menu {
+    background-color: var(--color_4);
+    padding-top: 22px;
+    border: 1px solid var(--color_1);
+}
+
+.menu-item {
+    padding: 12px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.menu-item:hover {
+    background-color: var(--color_5);
+}
+
+.menu-item.active {
+    background-color: var(--color_3);
+    border-left: 6px solid var(--color_2);
+    font-weight: 600;
+}
+
+.menu-item i {
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+.menu-item span {
+    font-size: 30px;
+    color: var(--color_2);
+}
+
+/* Overlay cho hộp xác nhận */
+.logout-confirm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Hộp xác nhận */
+.logout-confirm-box {
+    background-color: white;
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: slide-up 0.3s ease;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header của hộp xác nhận */
+.logout-confirm-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.logout-confirm-header i {
+    color: #F43F5E;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.logout-confirm-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Nội dung hộp xác nhận */
+.logout-confirm-content {
+    padding: 20px;
+}
+
+.logout-confirm-content p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Các nút hành động */
+.logout-confirm-actions {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+}
+
+.logout-confirm-actions button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel {
+    background-color: #e0e0e0;
+    color: #333;
+    margin-right: 10px;
+}
+
+.btn-cancel:hover {
+    background-color: #d0d0d0;
+}
+
+.btn-confirm {
+    background-color: #F43F5E;
+    color: white;
+}
+
+.btn-confirm:hover {
+    background-color: #e43956;
+}

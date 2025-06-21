@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.div-1 {
+    grid-column: span 5/ span 5;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-top: 50px;
+}
+.div-1 h3{
+    font-size: 18px;
+    color: var(--color_1);
+    white-space: nowrap;
+}
+
+.div-2 {
+    grid-column: 9 / 13;
+    grid-column-start: 9;
+    grid-row-start: 1;
+    margin-top: 50px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 300px;
+}
+
+.div-2 button {
+    background-color: var(--color_3);
+    color: var(--color_1);
+    height: 30px;
+    width: 118px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 15px;
+    font-family: 'Koh Santepheap', sans-serif;
+}
+
+.div-3 {
+    grid-column: 9/13;
+    grid-row: 2/7;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ranking tabs styling */
+.ranking-tabs {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ranking-tabs button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Default state - light bg with pink text */
+.ranking-tabs button {
+    background-color: var(--color_3);
+    color: var(--color_1);
+}
+
+/* Active state - pink bg with white text */
+.ranking-tabs button.active {
+    background-color: var(--color_1);
+    color: white;
+}
+
+/* Ranking list styling */
+.ranking-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.ranking-item {
+    display: flex;
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+}
+
+.ranking-item:last-child {
+    border-bottom: none;
+}
+
+.rank-number {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 30px;
+    color: var(--color_1);
+}
+
+.manga-image {
+    width: 40px;
+    height: 55px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.manga-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.manga-details {
+    flex: 1;
+    width: 100%;
+    max-width: 186px;
+    display: flex;
+    flex-direction: column;
+}
+
+.manga-details h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #333;
+    /* Ngăn ko cho vban xuống dòng */
+    white-space: nowrap;
+    /* Ẩn phần văn bản vượt quá kích thước */
+    overflow: hidden;
+    /* thêm dấu 3 chấm khi văn bản bị ẩn */
+    text-overflow: ellipsis;
+}
+
+.manga-details p {
+    font-size: 12px;
+    color: #777;
+}
+
+.view-count {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.view-count span {
+    font-size: 12px;
+    color: #888;
+}
+
+.div_4 {
+    grid-column: 1 / 9;
+    grid-row: 2 / 9;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+
+.comics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 322px);
+    gap: 20px;
+}
+
+.comic-card {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.comic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.comic-thumbnail {
+    height: 210px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.comic-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comic-info-2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.comic-title {
+    margin: 5px 4px 15px ;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.comic-chapters-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 10px;
+    margin: 0 5px;
+}
+
+.chapter-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+    margin: 2px 0;
+}
+
+.chapter-number {
+    font-size: 10px;
+    color: rgb(8, 8, 8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chapter-time {
+    font-size: 9px;
+    color: #000000;
+    margin-left: 5px;
+}
+
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 5px;
+}
+
+.pagination-arrow, .pagination-number {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.2s;
+    color: #FB7185
+}
+
+.pagination-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-number.active {
+    background-color: #FB7185;
+    color: white;
+    border-color: #FB7185;
+}
+
+.pagination-arrow:hover:not(:disabled),
+.pagination-number:hover:not(.active) {
+    background-color: #eee;
+}

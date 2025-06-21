@@ -1,0 +1,416 @@
+.gt-story-container {
+    grid-column: 2/3;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header với thông tin tổng quan */
+.gt-story-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.story-cover-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 240px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-cover-1 {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.story-status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.story-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-title-1 {
+    font-size: 28px;
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.story-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: baseline;
+}
+
+.meta-label {
+    width: 100px;
+    font-weight: 500;
+    color: #666;
+}
+
+.meta-value {
+    flex: 1;
+}
+
+.category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.category-tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    color: #555;
+}
+
+.story-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    margin-bottom: 25px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+}
+
+.story-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.read-button {
+    background-color: var(--color_2);
+    color: white;
+}
+
+.read-latest-button {
+    background-color: #2196f3;
+    color: white;
+}
+
+.follow-button {
+    background-color: #f5f5f5;
+    color: #e91e63;
+    border: 1px solid #e0e0e0;
+}
+
+.share-button {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #e0e0e0;
+}
+
+/* Phần mô tả */
+.story-description-section {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.story-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    white-space: pre-line;
+    max-height: 120px;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.story-description.expanded {
+    max-height: 1000px;
+}
+
+.toggle-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: var(--color_2);
+    font-weight: 500;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Tab chuyển đổi */
+.content-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 25px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-button.active {
+    color: var(--color_2);
+    border-bottom-color: var(--color_2);
+}
+
+/* Danh sách chương */
+.chapters-section {
+    margin-bottom: 30px;
+}
+
+.chapters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.chapters-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.sort-button {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333;
+}
+
+.chapters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+.chapter-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.chapter-row:hover {
+    background-color: #f0f0f0;
+}
+
+.chapter-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chapter-number-3 {
+    font-weight: 500;
+    color: var(--color_2);
+}
+
+.chapter-title {
+    color: #333;
+}
+
+.chapter-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+.chapter-date, .chapter-views {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.load-more-chapters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Phần bình luận */
+.comments-section {
+    margin-bottom: 30px;
+}
+
+.comment-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-submit {
+    padding: 0 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment-item {
+    display: flex;
+    gap: 15px;
+}
+
+.comment-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-content {
+    flex: 1;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-user {
+    font-weight: 500;
+    color: #333;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #666;
+}
+
+.comment-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gt-story-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .story-cover-wrapper {
+        width: 180px;
+        margin: 0 auto;
+    }
+    
+    .story-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .chapter-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .chapter-meta {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

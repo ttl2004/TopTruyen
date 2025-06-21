@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Admin{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 100vh;
+    overflow: visible;
+
+}
+
+.admin-header {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70px 100vh;
+}
+
+/* Styles cho admin-layout */
+.admin-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    width: 100%;
+}
+
+/* Styles cho admin-container */
+.admin-container {
+    display: flex;
+    flex: 1;
+    position: relative;
+    margin-top: 60px; /* Khoảng cách dưới header */
+    min-height: calc(100vh - 60px); /* Chiều cao tối thiểu bằng chiều cao màn hình trừ đi header */
+}
+
+
+.admin-content {
+    background-color: #F8F5F6;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+}
+
+.HC-container {
+    margin: 4px 16px 0 16px;
+    height: 65px;
+    background-color: #F8F5F6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.HC-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px; /* Độ dày của underline */
+    background-color: var(--color_2); /* Màu của underline */
+}
+.HC-container h2 {
+    color: var(--color_1);
+    font-size: 40px;
+}
+/* Styling cho avatar và tên admin */
+.HC-user {
+    display: flex;
+    align-items: center;
+}
+
+.HC-user span {
+    margin-right: 12px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color_1);
+}
+
+.admin-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+  
+}
+
+
